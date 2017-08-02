@@ -13,4 +13,6 @@ $configs->env->development->database->setConnectionData(array(
   'dbname' => 'sistemahx',
 ));
 
+$configs->env->development->auth->setURLs('/sistema/home/', '/sistema/login/');
+
 return $configs;
