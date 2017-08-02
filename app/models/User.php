@@ -40,14 +40,14 @@ class User extends \HXPHP\System\Model
 			return $callbackObj;
 		}
 
-		$post = array_merge($post, array(
+		$user_data = array(
 			'role_id' => $role->id,
 			'status' => 1
 		));
 		//criptografando password
 		$password = \HXPHP\System\Tools::hashHX($post['password']);
 
-		$post = array_merge($post, $password);
+		$post = array_merge($post, $user_data, $password);
 
 		//criando um usuario
 		$cadastrar = self::create($post);//recebendo usuário
