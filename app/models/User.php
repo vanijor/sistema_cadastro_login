@@ -43,7 +43,7 @@ class User extends \HXPHP\System\Model
 		$user_data = array(
 			'role_id' => $role->id,
 			'status' => 1
-		));
+		);
 		//criptografando password
 		$password = \HXPHP\System\Tools::hashHX($post['password']);
 

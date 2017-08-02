@@ -10,7 +10,7 @@ class CadastroController extends \HXPHP\System\Controller
 		$this->load(
 			'Services\Auth',
 			$configs->auth->after_login,
-			$configs->auth->after_logout
+			$configs->auth->after_logout,
 			true //redirect
 		);
 
